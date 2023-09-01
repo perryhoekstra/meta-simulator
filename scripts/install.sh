@@ -53,13 +53,13 @@ cd ../../
 
 cd $run_dir
 
-#######Ont guppy upgrade to 6.5.7########################################
-wget https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy-cpu_6.5.7_linux64.tar.gz -P src/
+#######Ont guppy upgrade to 3.4.5########################################
+wget https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy-cpu_3.4.5_linux64.tar.gz -P src/
 
-mkdir $src_bin/DeepSimulator/base_caller/guppy_6.5.7
-tar -xvzf src/ont-guppy-cpu_6.5.7_linux64.tar.gz --directory $src_bin/DeepSimulator/base_caller/guppy_6.5.7
+mkdir $src_bin/DeepSimulator/base_caller/guppy_3.4.5
+tar -xvzf src/ont-guppy-cpu_3.4.5_linux64.tar.gz --directory $src_bin/DeepSimulator/base_caller/guppy_3.4.5
 
-rm -rf src/ont-guppy-cpu_6.5.7_linux64.tar.gz
+rm -rf src/ont-guppy-cpu_3.4.5_linux64.tar.gz
 
 
 #Enable fast mode (less accurate) for cpu basecalling
@@ -81,7 +81,7 @@ ln -sf $src_bin/DeepSimulator/deep_simulator_fast5only.sh\
 
 #because albacore doesnt work in the deepsim install script, redo it
 source activate basecall
-wget https://mirror.oxfordnanoportal.com/software/analysis/ont_albacore-2.3.1-cp36-cp36m-manylinux1_x86_64.whl \
+wget https://cdn.oxfordnanoportal.com/software/analysis/ont_albacore-2.3.1-cp36-cp36m-manylinux1_x86_64.whl \
 -P $src_bin/
 pip install $src_bin/ont_albacore-2.3.1-cp36-cp36m-manylinux1_x86_64.whl
 rm $src_bin/*albacore*
