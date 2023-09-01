@@ -53,13 +53,13 @@ cd ../../
 
 cd $run_dir
 
-#######Ont guppy upgrade to 3.4.5########################################
+#######Ont guppy upgrade to 6.5.7########################################
 wget https://cdn.oxfordnanoportal.com/software/analysis/ont-guppy-cpu_6.5.7_linux64.tar.gz -P src/
 
-mkdir $src_bin/DeepSimulator/base_caller/guppy_3.4.5
-tar -xvzf src/ont-guppy-cpu_3.4.5_linux64.tar.gz --directory $src_bin/DeepSimulator/base_caller/guppy_3.4.5
+mkdir $src_bin/DeepSimulator/base_caller/guppy_6.5.7
+tar -xvzf src/ont-guppy-cpu_6.5.7_linux64.tar.gz --directory $src_bin/DeepSimulator/base_caller/guppy_6.5.7
 
-rm -rf src/ont-guppy-cpu_3.4.5_linux64.tar.gz
+rm -rf src/ont-guppy-cpu_6.5.7_linux64.tar.gz
 
 
 #Enable fast mode (less accurate) for cpu basecalling
